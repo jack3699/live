@@ -88,7 +88,7 @@ npm run build
 - 个人中心
 
 ## 文件结构
-```shell
+```
 .
 ├── build  项目构建配置
 └── src
@@ -100,7 +100,7 @@ npm run build
     ├── styles  样式文件
     ├── template  模板文件
     ├── vendors  公共库文件
-    └── views
+    └── views	视图
         ├── access  权限管理
         ├── advanced-router  高级路由
         ├── error_page  错误页面
@@ -113,7 +113,7 @@ npm run build
         │   ├── shrinkable-menu  可收缩菜单
         │   └── theme-switch  主题切换
         ├── message  消息中心
-        ├── my_components  业务组件
+        ├── my-components  业务组件
         │   ├── area-linkage  中国行政区级联选择器
         │   ├── count-to  数字渐变
         │   ├── draggable-list  可拖拽列表
@@ -135,58 +135,58 @@ npm run build
 ## 效果展示
 
 - 响应式布局首页
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/home.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/home.gif)
 
 - 标签导航
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/page-tags.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/page-tags.gif)
 
 - 权限管理
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/access.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/access.gif)
 
 - 可拖拽列表
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/dragable-list.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/dragable-list.gif)
 
 - 图片预览编辑
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/image-editor.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/image-editor.gif)
 
 - 文件上传
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/upload.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/upload.gif)
 
 - 数字渐变
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/count-to.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/count-to.gif)
 
 - 文章发布
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/article-publish.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/article-publish.gif)
 
 - 工作流
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/workflow.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/workflow.gif)
 
 - 可拖拽表格
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/dragable-table.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/dragable-table.gif)
 
 - 可编辑表格
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/editable-table.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/editable-table.gif)
 
 - 表格导出数据
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/exportable-table.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/exportable-table.gif)
 
 - 表格转图片
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/table2image.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/table2image.gif)
 
 - 错误页面
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/error-page.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/error-page.gif)
 
 - 锁屏
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/locking.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/locking.gif)
 
 - 可收缩侧边栏
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/sidebarmenu.gif)s
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/sidebarmenu.gif)s
 
 - 主题切换
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/theme.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/theme.gif)
 
 - 消息中心
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/message.gif)
+  ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/message.gif)
 
 ## License
 [MIT](http://opensource.org/licenses/MIT)

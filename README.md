@@ -192,3 +192,7 @@ npm run build
 [MIT](http://opensource.org/licenses/MIT)
 
 Copyright (c) 2016-present, iView
+
+图片尺寸：
+logo.jpg:312*85(分辨率:96dpi)-------------logo
+logo-min.jpg:91*91(分辨率:96dpi)----------图标

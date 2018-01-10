@@ -9,7 +9,8 @@ Vue.use(VueRouter);
 
 // 路由配置
 const RouterConfig = {
-    // mode: 'history',
+//	去除路由中的#号
+    mode: 'history',
     routes: routers
 };
 

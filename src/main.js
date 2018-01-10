@@ -6,10 +6,12 @@ import store from './store';
 import App from './app.vue';
 import '@/locale';
 import 'iview/dist/styles/iview.css';
+//引入国际化插件
 import VueI18n from 'vue-i18n';
 import util from './libs/util';
-
+//使用国际化插件
 Vue.use(VueI18n);
+
 Vue.use(iView);
 
 new Vue({

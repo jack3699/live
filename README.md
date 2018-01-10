@@ -11,16 +11,28 @@
 
 ##使用到的技术
 - vue全家桶
+<<<<<<< HEAD
   - vue
   - vue-router(路由)
   - vuex(状态管理)
   - Vue-resource
   - iview (UI 组件库)
+=======
+	- vue
+	- vue-router(路由)
+	- vuex(状态管理)
+	- Vue-resource
+	- iview (UI 组件库)
+>>>>>>> 1bb7d73e2dbbbb66ba696f837591338ab6da99e4
 - es6
 - webpack
 - less
 
+<<<<<<< HEAD
 ## 安装
+=======
+## Install
+>>>>>>> 1bb7d73e2dbbbb66ba696f837591338ab6da99e4
 ```bush
 // 安装依赖
 npm install

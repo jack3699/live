@@ -1,3 +1,6 @@
+/**
+ * 语言包
+ */
 export default {
     'zh-CN': {
         home: '首页',

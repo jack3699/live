@@ -309,8 +309,10 @@ util.fullscreenEvent = function (vm) {
     // 全屏相关
 };
 /**
- * 
+ * 检测系统是否有新版本
+ * 如果有新版本，显示提示框
  * @param {Object} vm
+ * 
  */
 util.checkUpdate = function (vm) {
     axios.get('https://api.github.com/repos/iview/iview-admin/releases/latest').then(res => {

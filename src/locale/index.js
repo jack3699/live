@@ -1,3 +1,7 @@
+/**
+ * 设置语言类型：zh-CN && en-US && zh-TW
+ */
+
 import Vue from 'vue';
 import Locales from './locale';
 import zhLocale from 'iview/src/locale/lang/zh-CN';

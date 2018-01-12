@@ -1,27 +1,49 @@
+// Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中
 import axios from 'axios';
 import env from '../../build/env';
+// semver 用来管理node,和npm 的版本的控制
 import semver from 'semver';
+// 引入packjson包
 import packjson from '../../package.json';
-
+// 定义 util 对象
 let util = {
 
 };
+
+/**
+ * 设置title
+ * @param {Object} title
+ */
 util.title = function (title) {
     title = title || '公司管理系统';
     window.document.title = title;
 };
 
+// 设置:常量 ajaxUrl 的值
+// if env === 'development' return: 'http://127.0.0.1:8888'
+// else if env === 'production' return: 'https://www.url.com'
+//else return: 'https://debug.url.com'
 const ajaxUrl = env === 'development'
     ? 'http://127.0.0.1:8888'
     : env === 'production'
         ? 'https://www.url.com'
         : 'https://debug.url.com';
-
+/**
+ * 使用 axios 创建一个 axios 实例
+ */
 util.ajax = axios.create({
+	// 请求基础地址
     baseURL: ajaxUrl,
+    // 超时时间
     timeout: 30000
+    //同时还可以设置请求 header 信息
+//  headers: {'X-Custom-Header': 'foobar'}
 });
-
+/**
+ * 
+ * @param {Object} arr
+ * @param {Object} targetArr
+ */
 util.inOf = function (arr, targetArr) {
     let res = true;
     arr.forEach(item => {
@@ -31,7 +53,11 @@ util.inOf = function (arr, targetArr) {
     });
     return res;
 };
-
+/**
+ * 
+ * @param {Object} ele
+ * @param {Object} targetArr
+ */
 util.oneOf = function (ele, targetArr) {
     if (targetArr.indexOf(ele) >= 0) {
         return true;
@@ -39,7 +65,11 @@ util.oneOf = function (ele, targetArr) {
         return false;
     }
 };
-
+/**
+ * 
+ * @param {Object} itAccess
+ * @param {Object} currentAccess
+ */
 util.showThisRoute = function (itAccess, currentAccess) {
     if (typeof itAccess === 'object' && Array.isArray(itAccess)) {
         return util.oneOf(currentAccess, itAccess);
@@ -47,7 +77,11 @@ util.showThisRoute = function (itAccess, currentAccess) {
         return itAccess === currentAccess;
     }
 };
-
+/**
+ * 
+ * @param {Object} routers
+ * @param {Object} name
+ */
 util.getRouterObjByName = function (routers, name) {
     if (!name || !routers || !routers.length) {
         return null;
@@ -65,7 +99,11 @@ util.getRouterObjByName = function (routers, name) {
     }
     return null;
 };
-
+/**
+ * 
+ * @param {Object} vm
+ * @param {Object} item
+ */
 util.handleTitle = function (vm, item) {
     if (typeof item.title === 'object') {
         return vm.$t(item.title.i18n);
@@ -73,7 +111,12 @@ util.handleTitle = function (vm, item) {
         return item.title;
     }
 };
-
+/**
+ * 设置当前路径
+ * @param {Object} vm
+ * @param {Object} name
+ * @return 返回 当前路径 数组
+ */
 util.setCurrentPath = function (vm, name) {
     let title = '';
     let isOtherRouter = false;
@@ -183,7 +226,13 @@ util.setCurrentPath = function (vm, name) {
 
     return currentPathArr;
 };
-
+/**
+ * 
+ * @param {Object} vm
+ * @param {Object} name
+ * @param {Object} argu
+ * @param {Object} query
+ */
 util.openNewPage = function (vm, name, argu, query) {
     let pageOpenedList = vm.$store.state.app.pageOpenedList;
     let openedPageLen = pageOpenedList.length;
@@ -223,7 +272,13 @@ util.openNewPage = function (vm, name, argu, query) {
     }
     vm.$store.commit('setCurrentPageName', name);
 };
-
+/**
+ * 
+ * @param {Object} routers
+ * @param {Object} name
+ * @param {Object} route
+ * @param {Object} next
+ */
 util.toDefaultPage = function (routers, name, route, next) {
     let len = routers.length;
     let i = 0;
@@ -243,14 +298,20 @@ util.toDefaultPage = function (routers, name, route, next) {
         next();
     }
 };
-
+/**
+ * 
+ * @param {Object} vm
+ */
 util.fullscreenEvent = function (vm) {
     vm.$store.commit('initCachepage');
     // 权限菜单过滤相关
     vm.$store.commit('updateMenulist');
     // 全屏相关
 };
-
+/**
+ * 
+ * @param {Object} vm
+ */
 util.checkUpdate = function (vm) {
     axios.get('https://api.github.com/repos/iview/iview-admin/releases/latest').then(res => {
         let version = res.data.tag_name;
@@ -265,5 +326,6 @@ util.checkUpdate = function (vm) {
         }
     });
 };
-
+// 通过export方式导出，在导入时要加{ }，export default则不需要
+// 使用export default命令，为模块指定默认输出，这样就不需要知道所要加载模块的变量名
 export default util;

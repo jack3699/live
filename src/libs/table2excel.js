@@ -1,4 +1,7 @@
 var idTmr;
+/**
+ * 判断浏览器类型
+ */
 function getExplorer () {
     var explorer = window.navigator.userAgent;
     if (explorer.indexOf('MSIE') >= 0) {
@@ -75,9 +78,12 @@ function tranform (table, aId, name) {
     }
 }
 function Cleanup () {
+	// clearInterval() 方法可取消由 setInterval() 设置的 timeout。
+    // clearInterval() 方法的参数必须是由 setInterval() 返回的 ID 值。
     window.clearInterval(idTmr);
     // CollectGarbage();
 }
+// 定义变量:表格转Excel
 let tableToExcel = (function () {
     let uri = 'data:application/vnd.ms-excel;base64,';
     let template = '<html><head><meta charset="UTF-8"></head><body><table>{table}</table></body></html>';
